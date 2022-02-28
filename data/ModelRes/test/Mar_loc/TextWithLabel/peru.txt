@@ -1,0 +1,7 @@
+2011-09-01:	z=4:  petition/4 stop/false promotion/4 bear/false bile/4 
+2011-09-01:	z=8:  justice/8 god/false animals/8 
+2011-09-01:	z=4:  humans/false change/4 feel/4 fear/4 god/false 
+2011-09-01:	z=1:  selfish/1 killers/false 
+2011-09-01:	z=8:  humans/false die/8 
+2011-09-01:	z=4:  govegan/4 
+2011-09-01:	z=7:  

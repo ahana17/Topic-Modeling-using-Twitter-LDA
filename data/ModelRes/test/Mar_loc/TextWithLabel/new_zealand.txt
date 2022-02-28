@@ -1,0 +1,3 @@
+2011-09-01:	z=6:  nixonshead/6 bnodesk/false honest/false lockdown/false january/6 
+2011-09-01:	z=0:  tens/0 thousands/false dying/0 wide/false due/false transfer/0 deadly/false 
+2011-09-01:	z=19:  markets/false stocked/19 organised/19 crime/false 

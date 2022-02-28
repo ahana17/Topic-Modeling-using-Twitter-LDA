@@ -1,0 +1,7 @@
+2011-09-01:	z=12:  english/12 teacher/12 told/false bat/false reptile/12 lay/12 egg/12 live/false underground/12 
+2011-09-01:	z=0:  boomer/0 
+2011-09-01:	z=6:  xhnews/false medical/6 media/6 professionals/6 racism/6 stigma/6 fighting/false 
+2011-09-01:	z=4:  cdc/false chief/4 inaccurate/4 racist/false 
+2011-09-01:	z=1:  bbc/1 reporter/1 blame/1 canadian/1 iceberg/1 titanic/1 fall/1 
+2011-09-01:	z=7:  economist/7 editor/7 xenphobia/7 ampscapegoating/7 
+2011-09-01:	z=1:  afp/1 97samadhb/1 

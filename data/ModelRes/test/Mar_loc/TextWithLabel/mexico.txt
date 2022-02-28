@@ -1,0 +1,2 @@
+2011-09-01:	z=4:  close/4 lab/4 sequence/4 fear/4 
+2011-09-01:	z=10:  chineseculture/10 understand/false 

@@ -1,0 +1,10 @@
+2011-09-01:	z=5:  thinking/false profit/5 banning/false wildlife/5 animal/false food/false 
+2011-09-01:	z=5:  fact/false eat/false catdog/5 ban/false 
+2011-09-01:	z=6:  sounds/6 life/false important/false 
+2011-09-01:	z=6:  god/false increase/false suspect/false x6/6 sounds/6 good/false 
+2011-09-01:	z=3:  millions/false epicenter/false locals/3 missing/3 placeschina/3 government/false compensate/3 surviving/3 
+2011-09-01:	z=5:  xhnews/5 makes/5 sense/5 hubei/5 americans/false eat/false bats/false wild/5 animal/false markets/5 good/false 
+2011-09-01:	z=7:  stop/false eating/false living/false creatures/false 
+2011-09-01:	z=3:  spare/3 dogs/false birds/false bugs/3 ampinsects/3 snakes/3 monkeysdonkeys/3 
+2011-09-01:	z=14:  human/false animals/14 rightsgod/14 love/false themplease/14 
+2011-09-01:	z=7:  covidー/7 

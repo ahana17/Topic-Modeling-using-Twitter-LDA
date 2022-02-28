@@ -1,0 +1,7 @@
+2011-09-01:	z=4:  abta/4 travel/4 association/4 boycott/4 travel/4 sth/4 korea/4 vietnam/4 protest/4 dog/false cat/false meat/false trade/false sign/4 petition/4 9chsnoato/4 change/4 
+2011-09-01:	z=17:  business/false bloomberg/17 business/false worried/17 rat/17 meat/17 suppliers/17 eating/false wild/false animals/false brought/false disaster/false worry/17 fentanyl/17 suppliers/17 
+2011-09-01:	z=2:  onlynomaly/2 dogmeatshame/2 govt/false stolen/false dogs/2 fact/false killed/false thousands/2 earth/false ruined/false entire/false economy/false zoonotic/2 
+2011-09-01:	z=18:  schweiz/18 
+2011-09-01:	z=18:  europe/18 
+2011-09-01:	z=18:  usa/false 
+2011-09-01:	z=4:  brazil/4 

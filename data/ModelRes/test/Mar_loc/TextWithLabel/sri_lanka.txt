@@ -1,0 +1,2 @@
+2011-09-01:	z=14:  ate/false snakes/14 wild/14 animals/14 rawly/14 
+2011-09-01:	z=7:  iranians/7 italians/7 americans/false eat/false didnt/false 
