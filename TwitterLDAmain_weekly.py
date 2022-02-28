@@ -168,15 +168,15 @@ class TwitterLDAmain:
         print("Final Done")
 
 if __name__ == "__main__":
-     TwitterLDAmain('Jun', "4").main()
+     
 
-#    months = ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']
+    months = ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']
 
-#    for mon in months:
-#       TwitterLDAmain(mon, "1").main() 
-#       TwitterLDAmain(mon, "2").main() 
-#       TwitterLDAmain(mon, "3").main() 
-#       TwitterLDAmain(mon, "4").main() 
+    for mon in months:
+       TwitterLDAmain(mon, "1").main() # Week 1
+       TwitterLDAmain(mon, "2").main() # Week 2
+       TwitterLDAmain(mon, "3").main() # Week 3
+       TwitterLDAmain(mon, "4").main() # Week 4
 
 
  
