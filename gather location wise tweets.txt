@@ -1,0 +1,108 @@
+import pandas as pd
+import os
+import preprocessor as p
+import string
+from nltk.tokenize import TweetTokenizer
+from emoji import demojize
+import re
+
+tokenizer = TweetTokenizer()
+
+months = ['Mar'] 
+def get_str(i):
+  if i>=10:
+    return str(i)
+  else:
+    return '0' + str(i)   
+for mon in months:   
+   directory = "/covid-project/labeled_locations/" + mon+'_lab/'
+   directory2 = "/covid-project/keyword_based_dataset_no_dup/" + mon+'/'
+   output_dir = '/covid-project/labeled_locations/'+ mon+'/'
+
+   D = {}
+   for i in range(1,32):
+      df = pd.read_csv(directory+mon + '_' + get_str(i) + "_labeled.csv", encoding='utf-8', usecols = [3, 0], header = None)
+      
+      for i in range(1,len(df[0])-1):
+         if df[0][i][:-4] not in D:            
+            D[df[0][i][:-4]] = []
+            D[df[0][i][:-4]].append(df[3][i])
+      
+
+   for i in range(1,32):
+         df = pd.read_csv(directory2 + mon + ' ' + get_str(i) + ".csv", encoding='utf-8', usecols = [2, 0], header = None)  
+         for j in range(1,len(df[0])-1):
+           
+           if df[0][j][:-4] in D:            
+            D[df[0][j][:-4]].append(df[2][j])
+            with open(output_dir+D[df[0][j][:-4]][0]+'.txt', 'a+', encoding='utf-8') as f:
+                f.write("%s\n" % df[2][j])
+
+def normalizeToken(token):
+    lowercased_token = token.lower()
+    if token.startswith("@"):
+        return " "
+    elif token.startswith("#"):
+        return " "
+    elif lowercased_token.startswith("http") or lowercased_token.startswith("www"):
+        return " "
+    elif len(token) == 1:
+        return demojize(token)
+    else:
+        if token == "’":
+            return "'"
+        elif token == "…":
+            return "..."
+        else:
+            return token
+
+def normalizeTweet(tweet):
+
+    normTweet = tweet.replace("cannot ", " ").replace("n't ", " ").replace("n 't ", " ").replace("ca n't", " ").replace("ai n't", " ")
+    normTweet = normTweet.replace("'m ", " 'm ").replace("'re ", " 're ").replace("'s ", " 's ").replace(" i'll ", " ").replace("'d ", " 'd ").replace("'ve ", " 've ")
+    normTweet = normTweet.replace(" p . m .", "  p.m.") .replace(" p . m ", " p.m ").replace(" a . m .", " a.m.").replace(" a . m ", " a.m ")
+    normTweet = normTweet.replace("RT ", "").replace("rt ", "")
+    
+    normTweet = normTweet.translate((str.maketrans('','',string.punctuation)))
+
+    tokens = tokenizer.tokenize(normTweet.replace("’", "").replace("…", " "))
+    tokens = [word for word in tokens if len(word)>1]
+    tokens = [x for x in tokens if not (x.isdigit() 
+                                         or x[0] == '-' and x[1:].isdigit())]
+
+    normTweet = " ".join([normalizeToken(token) for token in tokens])
+    
+    
+    return " ".join(normTweet.split())
+def generate_texts(mon):
+    
+    directory = "/covid-project/labeled_locations/" + mon+'/'
+    output_dir = "/covid-project/"+'refined_loc_wise_hate/'+ mon+'/'
+    
+    
+    for filename in os.listdir(directory):
+        if(filename.endswith('.txt')):
+
+            df = pd.read_fwf(directory+filename, encoding='utf-8', usecols = [0], header = None)
+            df[0] = [normalizeTweet(item) for item in df[0]]
+            df.drop_duplicates(subset =[0], keep = False, inplace = True) 
+
+            with open(output_dir+filename[:-4]+'.txt', 'w', encoding='utf-8') as f:
+                for item in df[0]:
+                    f.write("%s\n" % item)
+                    print("%s\n" % item)
+
+    return 0
+
+months = ['Mar']
+
+for mon in months:
+    df = generate_texts(mon)
+    directory = "/covid-project/labeled_locations/" + mon+'/'
+
+    with open(mon+'_files.txt', 'w', encoding='utf-8') as f:
+        for filename in os.listdir(directory):
+            if(filename.endswith('.txt')):
+                f.write("%s.txt\n" % filename[:-4])
+                print("%s.txt\n" % filename[:-4])
+                                       
